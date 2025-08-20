@@ -1,0 +1,55 @@
+:root {
+  --bg: #f9fafb;
+  --bg-elev: #ffffff;
+  --txt: #0f172a;
+  --muted: #475569;
+  --brand: #0ea5e9;
+  --brand-2: #22c55e;
+  --shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+  --radius: 18px;
+  --space: 16px;
+}
+
+/* Layout */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: var(--txt);
+  background: var(--bg);
+  line-height: 1.6;
+}
+.container { width: min(1100px, 92vw); margin: auto; }
+.stack { display: grid; gap: var(--space); }
+.cluster { display: flex; gap: var(--space); flex-wrap: wrap; align-items: center; }
+
+/* Header */
+header { background: var(--bg-elev); box-shadow: 0 1px 0 rgba(0,0,0,.05); }
+.nav { padding: 10px 0; justify-content: space-between; }
+.brand { font-weight: bold; font-size: 1.2rem; }
+nav a { text-decoration: none; color: var(--muted); font-weight: 500; }
+nav a:hover { color: var(--brand); }
+
+/* Hero */
+.hero { padding: 60px 0; text-align: center; background: linear-gradient(120deg, var(--brand) 0%, var(--brand-2) 100%); color: white; border-radius: 0 0 var(--radius) var(--radius); }
+.hero .title { font-size: 2.8rem; margin: 0; }
+.hero .lead { font-size: 1.2rem; opacity: 0.9; }
+.btn { display: inline-block; margin-top: 20px; padding: 10px 20px; background: white; color: var(--brand); border-radius: var(--radius); text-decoration: none; font-weight: bold; box-shadow: var(--shadow); }
+
+/* Cards */
+.grid { display: grid; gap: var(--space); grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.card { background: var(--bg-elev); border-radius: var(--radius); padding: var(--space); box-shadow: var(--shadow); transition: transform 0.2s; }
+.card:hover { transform: translateY(-4px); }
+.card img { width: 100%; border-radius: var(--radius); margin-bottom: 10px; }
+.card h3 { margin-top: 0; }
+.chip { font-size: 0.8rem; background: var(--brand); color: white; padding: 2px 8px; border-radius: 999px; }
+
+/* Weather */
+.weather { background: var(--bg-elev); padding: var(--space); border-radius: var(--radius); box-shadow: var(--shadow); }
+.weather button { padding: 8px 16px; border: none; border-radius: var(--radius); background: var(--brand); color: white; font-weight: bold; cursor: pointer; }
+.weather button:hover { background: var(--brand-2); }
+.readout { display: grid; gap: var(--space); grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: var(--space); }
+.wx-card { padding: var(--space); border-radius: var(--radius); background: #eef2ff; text-align: center; }
+.wx-temp { font-size: 2rem; font-weight: bold; }
+
+/* Footer */
+footer { text-align: center; padding: 30px 0; color: var(--muted); }

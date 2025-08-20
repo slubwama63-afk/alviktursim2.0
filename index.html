@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>alvikturism — Upptäck, dröm & kolla låtsasväder</title>
+  <meta name="description" content="alvikturism: en luftig demo-webb för destinationskort och låtsasväder." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav cluster" role="navigation" aria-label="Huvudnavigation">
+      <div class="brand">alvikturism</div>
+      <nav class="cluster" style="margin-left:auto">
+        <a href="#upptack">Upptäck</a>
+        <a href="#vader">Väder</a>
+        <a href="#tips">Tips</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container stack">
+        <h1 class="title">Upptäck Alvik med lätthet</h1>
+        <p class="lead">Luftigt upplägg, snabba kort och ett lekfullt låtsasväder 💨☀️</p>
+        <div class="cluster">
+          <a class="cta" href="#upptack">Börja utforska</a>
+          <a class="button" href="#vader">Kolla väder</a>
+        </div>
+      </div>
+      <div class="blob" aria-hidden="true"></div>
+    </section>
+
+    <!-- DESTINATIONER -->
+    <section id="upptack">
+      <div class="container">
+        <h2 class="section-title">Upptäck</h2>
+        <p class="section-lead">Små pärlor runt Alvik – klicka dig fram och dröm dig bort.</p>
+        <div class="grid" role="list">
+          <article class="card" role="listitem">
+            <img src="https://picsum.photos/400/250?random=1" alt="Sjöglimt" />
+            <div class="chip">Nära vatten</div>
+            <h3>Sjöglimt</h3>
+            <p>Stillhet, bryggor och kvällssol. Perfekt för en picknick efter jobbet.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <img src="https://picsum.photos/400/250?random=2" alt="Björkallén" />
+            <div class="chip">Grönt & skönt</div>
+            <h3>Björkallén</h3>
+            <p>En promenadsträcka med fågelkvitter och mjuka skuggor från björkarna.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <img src="https://picsum.photos/400/250?random=3" alt="Höjden" />
+            <div class="chip">Utsikt</div>
+            <h3>Höjden</h3>
+            <p>En kort men luftig vandring som belönar dig med utsikt över viken.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <img src="https://picsum.photos/400/250?random=4" alt="Lillängen" />
+            <div class="chip">Picknick</div>
+            <h3>Lillängen</h3>
+            <p>En mjuk gräsyta för filt, fika och frisbee. Barnvänligt och öppet.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VÄDER -->
+    <section id="vader">
+      <div class="container stack weather" aria-live="polite">
+        <div class="cluster toolbar">
+          <div>
+            <h2 class="section-title">Väder just nu (på låtsas)</h2>
+            <p class="section-lead">Genererat för känsla – inte för segling 😉</p>
+          </div>
+          <div class="cluster">
+            <select id="place"></select>
+            <button id="refresh">Uppdatera väder</button>
+          </div>
+        </div>
+        <div class="readout" id="readout"></div>
+      </div>
+    </section>
+
+    <!-- TIPS -->
+    <section id="tips">
+      <div class="container">
+        <h2 class="section-title">Tips</h2>
+        <p class="section-lead">Packa filt, vattenflaska och en tröja för kvällsbrisen. Lämna platsen finare än du fann den.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> alvikturism — byggd med kärlek, HTML, CSS & JS.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
